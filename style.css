@@ -1119,16 +1119,17 @@ body.lamp-pending .quick-stats {
   transform: translate3d(0, 0, 0) !important;
 }
 
-/* 4. Navbar Slide-Down */
-body.lamp-pending .navbar {
+/* 4. Navbar Slide-Down - Enters only after hero content */
+body.lamp-pending .navbar,
+body.hero-intro-active .navbar:not(.navbar-revealed) {
   opacity: 0;
   transform: translateY(-24px);
   pointer-events: none;
 }
 
-body.hero-intro-active .navbar,
+.navbar.navbar-revealed,
 body.hero-intro-done .navbar,
-body:not(.lamp-pending) .navbar {
+body:not(.lamp-pending):not(.hero-intro-active) .navbar {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -1205,6 +1206,85 @@ body.lamp-pending .node-4 { transform: translate3d(35px, 25px, 0); }
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: opacity 0.75s var(--ease-out), transform 0.85s var(--ease-cinematic);
+}
+
+/* 9. Hero Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(14px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  text-decoration: none;
+  transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-cinematic);
+}
+
+.hero-scroll-indicator.scroll-indicator-revealed,
+body.hero-intro-done .hero-scroll-indicator,
+body:not(.lamp-pending):not(.hero-intro-active) .hero-scroll-indicator {
+  opacity: 0.75;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.hero-scroll-indicator:hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.scroll-mouse {
+  width: 20px;
+  height: 32px;
+  border: 1.5px solid rgba(167, 139, 250, 0.45);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  box-shadow: 0 0 12px rgba(124, 92, 255, 0.2);
+}
+
+.scroll-wheel {
+  width: 3px;
+  height: 6px;
+  background: var(--secondary, #20d9ff);
+  border-radius: 2px;
+  animation: scrollWheelBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollWheelBounce {
+  0% { transform: translateY(0); opacity: 1; }
+  60% { transform: translateY(8px); opacity: 0.2; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.scroll-text {
+  font-family: var(--font-display, inherit);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: var(--text-dim, #94a3b8);
+}
+
+@media (max-width: 768px) {
+  .hero-scroll-indicator {
+    bottom: 12px;
+  }
+}
+
+/* GPU will-change optimization during active intro */
+body.hero-intro-active .split-char,
+body.hero-intro-active .core-card,
+body.hero-intro-active .hero-light-bloom,
+body.hero-intro-active .hero-visual .node,
+body.hero-intro-active .navbar,
+body.hero-intro-active .hero-scroll-indicator {
+  will-change: transform, opacity;
 }
 
 @media (pointer: coarse) {
@@ -2857,6 +2937,14 @@ footer p {
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .hero-scroll-indicator,
+  .scroll-wheel {
+    animation: none !important;
+    transition: none !important;
+    opacity: 0.8 !important;
+    transform: translateX(-50%) !important;
   }
 
   .welcome-screen:not(.entered) {

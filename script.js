@@ -401,6 +401,8 @@ function playHeroIntro() {
     if (space) space.style.opacity = "0.35";
     if (navbar) navbar.classList.add("navbar-revealed");
     if (coreCard) coreCard.classList.add("card-revealed");
+    const scrollIndicator = $("#heroScrollIndicator");
+    if (scrollIndicator) scrollIndicator.classList.add("scroll-indicator-revealed");
     $$(".hero-badge, .eyebrow, .hero-greeting, .hero-tagline, .hero-text, .hero-actions, .quick-stats").forEach(el => el.classList.add("intro-revealed"));
     $$(".hero-visual .node").forEach(n => n.classList.add("node-drift-in"));
     if (typewriterEl) typewriterEl.textContent = words[0];
@@ -410,9 +412,6 @@ function playHeroIntro() {
   // 1. Radial Light Bloom expands & particle canvas fades in
   if (bloom) bloom.classList.add("bloom-active");
   if (space) space.classList.add("space-revealed");
-
-  // 8. Navbar slides down and fades in
-  if (navbar) navbar.classList.add("navbar-revealed");
 
   // Eyebrow & status badge
   const badge = $(".hero-badge");
@@ -472,7 +471,14 @@ function playHeroIntro() {
     nodes.forEach(node => node.classList.add("node-drift-in"));
   }, HERO_INTRO_CONFIG.nodesDelay);
 
-  // 7. Settle sequence & initiate typewriter
+  // 7. Scroll indicator & Navbar slide down after hero content
+  setTimeout(() => {
+    const scrollIndicator = $("#heroScrollIndicator");
+    if (scrollIndicator) scrollIndicator.classList.add("scroll-indicator-revealed");
+    if (navbar) navbar.classList.add("navbar-revealed");
+  }, 1600);
+
+  // 8. Settle sequence & initiate typewriter
   setTimeout(() => {
     document.body.classList.add("hero-intro-done");
     document.body.classList.remove("hero-intro-active");
@@ -501,6 +507,10 @@ function resetHeroIntro() {
   if (space) space.classList.remove("space-revealed");
   const navbar = $("#navbar");
   if (navbar) navbar.classList.remove("navbar-revealed");
+  const scrollIndicator = $("#heroScrollIndicator");
+  if (scrollIndicator) scrollIndicator.classList.remove("scroll-indicator-revealed");
+  const primaryBtn = $(".hero-actions .btn.primary");
+  if (primaryBtn) primaryBtn.classList.remove("glow-pulse");
   const coreCard = $("#heroCoreCard");
   if (coreCard) coreCard.classList.remove("card-revealed");
   const ring = $(".portrait-ring-circle");
