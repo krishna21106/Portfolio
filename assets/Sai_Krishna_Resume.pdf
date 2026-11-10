@@ -1,0 +1,108 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2571 >>
+stream
+BT
+/F1 22 Tf
+50 780 Td
+(NARIBOYINA SAI KRISHNA) Tj
+/F2 12 Tf
+0 -20 Td
+(Full-Stack Developer Intern | B.Tech CSE, MITS | CGPA: 7.6/10) Tj
+0 -16 Td
+(Email: saikrishnayadav218@gmail.com | GitHub: github.com/krishna21106 | LinkedIn: in/sai-krishna-1449a5322) Tj
+0 -10 Td
+(____________________________________________________________________________________________________) Tj
+/F1 14 Tf
+0 -24 Td
+(EDUCATION) Tj
+/F2 11 Tf
+0 -16 Td
+(Madanapalle Institute of Technology and Science (MITS) - B.Tech in CSE (2022 - 2026)) Tj
+0 -14 Td
+(Cumulative CGPA: 7.6 / 10.0 | Core: Data Structures, DBMS, Operating Systems, Networks, Web Tech) Tj
+0 -10 Td
+(____________________________________________________________________________________________________) Tj
+/F1 14 Tf
+0 -24 Td
+(TECHNICAL SKILLS) Tj
+/F2 11 Tf
+0 -16 Td
+(Languages: Python, JavaScript (ES6+), Java, SQL, HTML5, CSS3) Tj
+0 -14 Td
+(Backend & Voice AI: Django, Django REST Framework, LiveKit Agents, Sarvam AI STT/TTS, Silero VAD) Tj
+0 -14 Td
+(Databases: PostgreSQL (select_for_update row locking), SQLite, ACID Transactions, Relational Modeling) Tj
+0 -14 Td
+(Frontend & Tools: Semantic HTML5, Vanilla ES6+, CSS Grid/Flexbox, Git, GitHub, Render, Postman) Tj
+0 -10 Td
+(____________________________________________________________________________________________________) Tj
+/F1 14 Tf
+0 -24 Td
+(FEATURED PROJECTS) Tj
+/F1 12 Tf
+0 -16 Td
+(1. Zenith Events - Real-Time Ticket Booking Platform) Tj
+/F2 10 Tf
+0 -14 Td
+(- Implemented PostgreSQL atomic row-level locking (select_for_update) in Django to prevent double-bookings.) Tj
+0 -13 Td
+(- 100% elimination of race conditions during ticket rushes; built interactive seat matrix; live on Render.) Tj
+/F1 12 Tf
+0 -18 Td
+(2. Multilingual AI Voice Tutor (LiveKit + Sarvam AI)) Tj
+/F2 10 Tf
+0 -14 Td
+(- Real-time voice agent using LiveKit VoicePipelineAgent, Silero VAD, Sarvam streaming STT/TTS (bulbul:v3).) Tj
+0 -13 Td
+(- Vernacular code-mixing (Hinglish/Teluglish) with OpenAI GPT-4o-mini and active interruption handling.) Tj
+/F1 12 Tf
+0 -18 Td
+(3. Intelligent Meeting Scheduler) Tj
+/F2 10 Tf
+0 -14 Td
+(- Availability intersection engine calculating mutual clash-free intervals via Django REST endpoints.) Tj
+/F1 12 Tf
+0 -18 Td
+(4. EHR & Lab Management System) Tj
+/F2 10 Tf
+0 -14 Td
+(- Normalized PostgreSQL schemas with Django REST API endpoints and strict Role-Based Access Control (RBAC).) Tj
+/F1 12 Tf
+0 -18 Td
+(5. Network Monitoring System) Tj
+/F2 10 Tf
+0 -14 Td
+(- Python socket telemetry polling remote endpoint latency, packet loss, and service uptime diagnostics.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002874 00000 n 
+0000002949 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3019
+%%EOF

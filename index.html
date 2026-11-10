@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sai Krishna — Computer Science & Engineering Student, Full-Stack Developer, and Interactive Web Portfolio." />
+  <title>Sai Krishna | Computer Science Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="lamp-pending">
+  <div class="welcome-screen" id="welcomeScreen" aria-label="Portfolio welcome screen">
+    <div class="welcome-content">
+      <div class="welcome-mark">SK</div>
+      <p class="welcome-eyebrow">PORTFOLIO · 2026</p>
+      <h1>Welcome to<br><span>My Portfolio</span></h1>
+      <p class="welcome-name">S A I &nbsp; K R I S H N A</p>
+      <div class="welcome-enter">
+        <span class="welcome-line"></span>
+        <span>PULL THE LAMP CHAIN TO ENTER</span>
+        <span class="welcome-line"></span>
+      </div>
+      <div class="welcome-scroll">↓</div>
+    </div>
+
+    <div class="welcome-lamp" id="welcomeLamp" aria-hidden="true">
+      <div class="lamp-shade">
+        <span class="lamp-glow"></span>
+      </div>
+      <div class="lamp-stem"></div>
+      <div class="lamp-base"></div>
+      <button class="lamp-chain" id="lampChain" tabindex="0" type="button" aria-label="Pull lamp chain to enter portfolio">
+        <span class="chain-line"></span>
+        <span class="chain-knob"></span>
+      </button>
+      <span class="lamp-hint">PULL THE CHAIN · ENTER</span>
+    </div>
+  </div>
+
+  <canvas id="space"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Creative Web-Developer Cursor -->
+  <div class="dev-cursor" id="devCursor" aria-hidden="true">
+    <span class="cursor-core"></span>
+    <span class="cursor-ring"></span>
+    <span class="cursor-code">&lt;/&gt;</span>
+    <span class="cursor-label">BUILD</span>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home"><span>SK</span><b>SAI KRISHNA</b></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <nav id="navLinks" aria-label="Main Navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Work</a>
+      <a href="#github">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta magnetic" href="#contact">Let's Talk <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <!-- Cinematic Ambient Light Bloom -->
+      <div class="hero-light-bloom" id="heroLightBloom" aria-hidden="true"></div>
+
+      <div class="hero-copy" id="heroCopy">
+        <div class="hero-badge"><i class="pulse-dot"></i><span>OPEN TO OPPORTUNITIES</span><b>2026</b></div>
+        <div class="eyebrow"><i class="pulse-dot"></i> COMPUTER SCIENCE & ENGINEERING · CSE</div>
+        <div class="hero-heading-group">
+          <span class="hero-greeting">Hi, I'm</span>
+          <h1 class="hero-name" id="heroName" aria-label="Sai Krishna">Sai Krishna</h1>
+        </div>
+        <h2 class="hero-tagline">Building <span class="typewriter-text"><span id="typewriter"></span><span class="cursor-pipe">|</span></span> digital experiences.</h2>
+        <p class="hero-text">A Computer Science student passionate about full-stack web applications, interactive interfaces, backend development, and practical software projects.</p>
+        <div class="hero-actions">
+          <a class="btn primary magnetic" href="#projects">Explore Work <span class="arrow">→</span></a>
+          <a class="btn ghost magnetic" href="https://github.com/krishna21106" target="_blank" rel="noopener">GitHub Profile ↗</a>
+        </div>
+        <div class="quick-stats">
+          <div><strong>GITHUB</strong><small>@krishna21106</small></div>
+          <div><strong>CSE</strong><small>Department</small></div>
+          <div><strong class="gradient-text">WEB DEV</strong><small>Development Focus</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="heroVisual">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orbit orbit-c"></div>
+        <div class="core-card tilt" id="heroCoreCard">
+          <div class="core-grid"></div>
+          <div class="core">
+            <span class="core-ring ring-1"></span>
+            <span class="core-ring ring-2"></span>
+            <span class="core-ring ring-3"></span>
+            <!-- Animated SVG Gradient Stroke Ring -->
+            <svg class="portrait-ring-svg" viewBox="0 0 260 260" aria-hidden="true">
+              <defs>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c5cff" />
+                  <stop offset="50%" stop-color="#20d9ff" />
+                  <stop offset="100%" stop-color="#a78bfa" />
+                </linearGradient>
+              </defs>
+              <circle class="portrait-ring-circle" cx="130" cy="130" r="126" />
+            </svg>
+            <button class="core-letter profile-core profile-reveal-target" id="profileReveal" type="button" aria-label="Touch to reveal profile image">
+              <img src="assets/profile.png" alt="Sai Krishna - Computer Science Student" decoding="async" loading="lazy" />
+              <span class="profile-reveal-hint"><b>+</b><small>TOUCH<br>TO REVEAL</small></span>
+            </button>
+          </div>
+          <span class="node node-1 float-anim">Django</span>
+          <span class="node node-2 float-anim delay-1">JavaScript</span>
+          <span class="node node-3 float-anim delay-2">Python</span>
+          <span class="node node-4 float-anim delay-3">PostgreSQL</span>
+          <div class="profile-caption"><span>SAI KRISHNA</span><b>CREATIVE ENGINEER</b></div>
+          <div class="visual-label"><span>PORTFOLIO STATUS</span><b class="online-pulse">● AVAILABLE</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading reveal" style="--i: 0">
+        <span class="section-number">01</span>
+        <div><p>GET TO KNOW ME</p><h2>About <span>Me</span></h2></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass reveal tilt" style="--i: 1">
+          <div class="avatar"><img src="assets/profile.png" alt="Sai Krishna portrait" decoding="async" loading="lazy" /></div>
+          <div>
+            <h3>Sai Krishna</h3>
+            <p>Computer Science & Engineering Student</p>
+            <p class="college-name">Madanapalle Institute of Technology and Science</p>
+          </div>
+          <div class="status"><i class="pulse-dot"></i> Energetic, driven & research-oriented</div>
+        </div>
+        <div class="about-copy reveal" style="--i: 2">
+          <p class="lead">Passionate about full-stack engineering, interactive UI, and building useful digital products.</p>
+          <p>I specialize in building robust web applications using Django, Python, JavaScript, PostgreSQL, and REST APIs. I enjoy turning ideas into responsive, reliable, and user-friendly digital products.</p>
+          <div class="info-row">
+            <div><span>Department</span><b>Computer Science (CSE)</b></div>
+            <div><span>Location</span><b>Andhra Pradesh, India</b></div>
+            <div><span>Phone</span><b>+91 9014723474</b></div>
+            <div><span>GitHub</span><b>@krishna21106</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading reveal" style="--i: 0">
+        <span class="section-number">02</span>
+        <div><p>TECHNICAL CORE</p><h2>Skills & <span>Expertise</span></h2></div>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card glass reveal tilt" style="--i: 1">
+          <div class="skill-icon">&lt;/&gt;</div>
+          <h3>Frontend & UI</h3>
+          <p>Modern, interactive web layouts with responsive design and retro/cinematic styling.</p>
+          <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>Tailwind</span></div>
+        </article>
+        <article class="skill-card glass reveal tilt" style="--i: 2">
+          <div class="skill-icon">PY</div>
+          <h3>Backend & APIs</h3>
+          <p>Full-stack backend architecture, database integration, and RESTful service development.</p>
+          <div class="chips"><span>Python</span><span>Django</span><span>REST APIs</span><span>Logic Circuits</span></div>
+        </article>
+        <article class="skill-card glass reveal tilt" style="--i: 3">
+          <div class="skill-icon">WEB</div>
+          <h3>Web Development</h3>
+          <p>Responsive interfaces, reusable components, API integration, and polished user experiences.</p>
+          <div class="chips"><span>React</span><span>JavaScript</span><span>REST APIs</span><span>Responsive UI</span></div>
+        </article>
+        <article class="skill-card glass reveal tilt" style="--i: 4">
+          <div class="skill-icon">DS</div>
+          <h3>Database & CS Core</h3>
+          <p>Relational databases, digital logic gate structures, data structures, and algorithms.</p>
+          <div class="chips"><span>SQL</span><span>PostgreSQL</span><span>C</span><span>DSA</span><span>Digital Logic</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-heading reveal" style="--i: 0">
+        <span class="section-number">03</span>
+        <div><p>PORTFOLIO SHOWCASE</p><h2>Selected <span>Work</span></h2></div>
+      </div>
+
+      <div class="project-filters reveal" style="--i: 1" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-pill active" data-filter="all" type="button" role="tab" aria-selected="true">All</button>
+        <button class="filter-pill" data-filter="Full Stack" type="button" role="tab" aria-selected="false">Full Stack</button>
+        <button class="filter-pill" data-filter="Web App" type="button" role="tab" aria-selected="false">Web App</button>
+        <button class="filter-pill" data-filter="Healthcare" type="button" role="tab" aria-selected="false">Healthcare</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid" aria-live="polite">
+        <!-- Data-driven project cards rendered via script.js -->
+      </div>
+    </section>
+
+    <section class="section github-section" id="github">
+      <div class="section-heading reveal" style="--i: 0">
+        <span class="section-number">04</span>
+        <div><p>OPEN SOURCE & REPOS</p><h2>Git<span>Hub</span></h2></div>
+      </div>
+      <div class="github-card glass reveal tilt" style="--i: 1">
+        <div class="github-main">
+          <div class="github-mark">●</div>
+          <div>
+            <p class="muted">GITHUB PROFILE</p>
+            <h3>Sai Krishna <span>@krishna21106</span></h3>
+            <p>Student · Open-source learning, development and projects.</p>
+            <a href="https://github.com/krishna21106" target="_blank" rel="noopener" class="text-link">Open GitHub profile ↗</a>
+          </div>
+        </div>
+        <div class="github-stats">
+          <div><strong id="repoCount" class="stat-counter">2</strong><span>Repositories</span></div>
+          <div><strong id="starCount" class="stat-counter">1</strong><span>Stars</span></div>
+          <div><strong id="followCount" class="stat-counter">—</strong><span>Followers</span></div>
+        </div>
+      </div>
+      <div id="githubRepos" class="github-repos">
+        <div class="repo-card glass reveal tilt" style="--i: 2">
+          <div class="repo-icon">{ }</div>
+          <div class="repo-content">
+            <div class="repo-title"><a href="https://github.com/krishna21106/skills-getting-started-with-github-copilot" target="_blank" rel="noopener">skills-getting-started-with-github-copilot</a><span class="public">Public</span></div>
+            <p>Exercise: Get started using GitHub Copilot.</p>
+            <div class="repo-meta"><span><i class="dot js"></i> JavaScript</span><span>★ GitHub repository</span></div>
+          </div>
+          <a class="repo-arrow" href="https://github.com/krishna21106/skills-getting-started-with-github-copilot" target="_blank" rel="noopener" aria-label="Open repository on GitHub">↗</a>
+        </div>
+        <div class="repo-card glass reveal tilt" style="--i: 3">
+          <div class="repo-icon">{ }</div>
+          <div class="repo-content">
+            <div class="repo-title"><a href="https://github.com/krishna21106/Intelligent-Meeting-Scheduler" target="_blank" rel="noopener">Intelligent-Meeting-Scheduler</a><span class="public">Public</span></div>
+            <p>Intelligent meeting scheduling project from the GitHub profile.</p>
+            <div class="repo-meta"><span>★ GitHub repository</span></div>
+          </div>
+          <a class="repo-arrow" href="https://github.com/krishna21106/Intelligent-Meeting-Scheduler" target="_blank" rel="noopener" aria-label="Open repository on GitHub">↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-box reveal" style="--i: 0">
+        <div class="contact-orb"></div>
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Let's build something<br><span>extraordinary.</span></h2>
+        <p>I'm open to collaborations, web development opportunities, and software engineering projects.</p>
+
+        <div class="contact-info-list">
+          <p>📞 Phone: <a href="tel:+919014723474" class="copy-field" data-copy="+919014723474">+91 9014723474</a></p>
+          <p>✉️ Email: <a href="mailto:saikrishnayadav218@gmail.com" class="copy-field" data-copy="saikrishnayadav218@gmail.com">saikrishnayadav218@gmail.com</a></p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn primary magnetic" href="mailto:saikrishnayadav218@gmail.com">Email Me ↗</a>
+          <a class="btn ghost magnetic" href="https://github.com/krishna21106" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="return-lamp-section" aria-label="Return to landing page">
+    <div class="return-lamp-wrap">
+      <p class="return-lamp-eyebrow">ONE LAST THING</p>
+      <h2>Pull the lamp <span>twice</span></h2>
+      <p class="return-lamp-copy">Pull the chain once to wake the lamp. Pull it a second time to return to the landing page.</p>
+      <div class="return-lamp" id="returnLamp">
+        <div class="return-lamp-shade"><span></span></div>
+        <div class="return-lamp-stem"></div>
+        <div class="return-lamp-base"></div>
+        <button class="return-lamp-chain" id="returnLampChain" type="button" aria-label="Pull lamp chain twice to return to landing page">
+          <span class="return-chain-line"></span>
+          <span class="return-chain-knob"></span>
+        </button>
+      </div>
+      <span class="return-lamp-hint" id="returnLampHint">PULL THE CHAIN · 2 TIMES TO RETURN</span>
+    </div>
+  </section>
+
+  <!-- Accessible Project Details Modal -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalOutcome" aria-hidden="true">
+    <div class="modal-window glass" role="document">
+      <button class="modal-close" id="modalCloseBtn" type="button" aria-label="Close project details modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-meta">
+          <span class="modal-tag" id="modalCategory">Category</span>
+          <span class="modal-year" id="modalYear">Year</span>
+        </div>
+        <h2 id="modalTitle">Project Title</h2>
+        <p class="modal-outcome" id="modalOutcome">One-line outcome</p>
+      </div>
+      <div class="modal-scroll-area">
+        <div class="modal-section">
+          <h4>The Problem</h4>
+          <p id="modalProblem">Problem statement</p>
+        </div>
+        <div class="modal-section">
+          <h4>The Solution</h4>
+          <p id="modalSolution">Solution details</p>
+        </div>
+        <div class="modal-section">
+          <h4>My Role</h4>
+          <p id="modalRole">Role details</p>
+        </div>
+        <div class="modal-section">
+          <h4>Key Features</h4>
+          <ul class="modal-feature-list" id="modalFeatures"></ul>
+        </div>
+        <div class="modal-section">
+          <h4>Key Metrics & Impact</h4>
+          <p class="modal-metric-badge" id="modalMetrics">TODO: add real metric</p>
+        </div>
+        <div class="modal-section">
+          <h4>Technologies Used</h4>
+          <div class="chips" id="modalTech"></div>
+        </div>
+      </div>
+      <div class="modal-footer" id="modalFooter">
+        <!-- Rendered action links -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div><a class="brand" href="#home"><span>SK</span><b>SAI KRISHNA</b></a><p>Designed & built for high performance.</p></div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Work</a>
+      <a href="#github">GitHub</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Sai Krishna. All rights reserved.</p>
+  </footer>
+
+  <button class="top-btn magnetic" id="topBtn" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
