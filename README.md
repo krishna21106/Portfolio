@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sai Krishna — Personal Portfolio
 
 A fast, interactive, and accessible personal portfolio website built with vanilla HTML5, CSS3, and modern JavaScript. Designed with a dark glassmorphic aesthetic, purple (`#7c5cff`) and cyan (`#20d9ff`) accents, smooth 3D tilt effects, and cinematic lamp pull interactions.
@@ -103,3 +104,7 @@ Because this project uses vanilla HTML, CSS, and JavaScript, no build step, comp
    - **Netlify / Vercel**: Connect the repository or drag-and-drop the directory.
 
 Make sure the `assets/` directory remains adjacent to `index.html` when deploying.
+=======
+# Portfolio
+my portfolio
+>>>>>>> 15addebc6c63b059220e1081244780ae9e954ac9
