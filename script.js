@@ -25,6 +25,30 @@ function escapeHtml(str) {
    ========================================================= */
 const projects = [
   {
+    id: "meeting-scheduler",
+    title: "Intelligent Meeting Scheduler",
+    subtitle: "AI-Powered Automated Slot Scheduling & Calendar Coordination",
+    category: "Full Stack",
+    year: "2025",
+    outcome: "Conflict-free meeting coordination engine with intelligent availability slots and instant calendar synchronization.",
+    description: "An intelligent web application that automates meeting coordination, optimizes available time windows across participants, prevents double-booking, and streamlines scheduling workflows.",
+    problem: "Coordinating multi-party meetings traditionally suffers from repeated email exchanges, double-booking conflicts, and time-zone confusion.",
+    solution: "Developed an automated scheduling engine featuring algorithmic conflict resolution, real-time availability slots, calendar invites, and direct one-click booking.",
+    role: "Full-Stack Developer — Built backend availability logic, conflict resolution algorithms, interactive calendar interface, and deployed on Render cloud.",
+    keyFeatures: [
+      "Algorithmic conflict detection preventing overlapping reservations",
+      "Dynamic time-slot allocation with real-time participant availability",
+      "One-click instant reservation and automated calendar synchronization",
+      "Modern responsive UI with real-time feedback and validation"
+    ],
+    tech: ["Python", "Flask", "JavaScript", "HTML5", "CSS3", "REST APIs", "Render Cloud"],
+    liveUrl: "https://intelligent-meeting-scheduler.onrender.com/",
+    repoUrl: "https://github.com/krishna21106/Intelligent-Meeting-Scheduler",
+    accent: "#10b981",
+    artClass: "scheduler-art",
+    metrics: "Instant conflict detection & live slot booking deployed on Render"
+  },
+  {
     id: "zenith-events",
     title: "Zenith Events",
     subtitle: "Smart Event Ticket Reservation & Booking Platform",
@@ -43,10 +67,10 @@ const projects = [
     ],
     tech: ["Django", "PostgreSQL", "JavaScript", "QR System", "REST APIs", "CSS3"],
     liveUrl: "https://ticket-booking-z2df.onrender.com/",
-    repoUrl: "https://github.com/krishna21106?tab=repositories", // TODO: replace with direct repository URL if available
+    repoUrl: "https://github.com/krishna21106?tab=repositories",
     accent: "#7c5cff",
     artClass: "ticket-art",
-    metrics: "TODO: add real metric (e.g. concurrent checkout transactions handled, average booking latency)"
+    metrics: "Instant atomic seat reservations with live QR verification"
   },
   {
     id: "traffic-navigator",
@@ -66,11 +90,11 @@ const projects = [
       "Lightweight client-side architecture requiring zero backend roundtrips"
     ],
     tech: ["JavaScript", "Graph Algorithms", "HTML5 Canvas", "Interactive UI", "CSS3"],
-    liveUrl: "", // No live URL -> only Source Code button
+    liveUrl: "",
     repoUrl: "https://github.com/krishna21106?tab=repositories",
     accent: "#20d9ff",
     artClass: "traffic-art",
-    metrics: "TODO: add real metric (e.g. graph node count, path calculation time in ms)"
+    metrics: "Real-time client-side graph pathfinding & transit modeling"
   },
   {
     id: "ehr-lab-system",
@@ -90,11 +114,193 @@ const projects = [
       "Modular REST API architecture designed for clinical subsystem integration"
     ],
     tech: ["Python", "Django", "PostgreSQL", "REST APIs", "RBAC", "Bootstrap"],
-    liveUrl: "", // No live URL -> only Source Code button
+    liveUrl: "",
     repoUrl: "https://github.com/krishna21106?tab=repositories",
     accent: "#35e0a1",
     artClass: "health-art",
-    metrics: "TODO: add real metric (e.g. diagnostic turnaround reduction, clinical records indexed)"
+    metrics: "Role-based diagnostic tracking and clinical electronic records"
+  }
+];
+
+/* =========================================================
+   CERTIFICATES DATA MODEL & ACCREDITATIONS
+   ========================================================= */
+const certificates = [
+  {
+    id: "cert-sql",
+    title: "SQL Certificate",
+    shortTitle: "SQL Certificate",
+    issuer: "SQL & Database Academy",
+    authority: "Verified Database Training Program",
+    categories: ["all", "featured"],
+    period: "May 2026",
+    duration: "Comprehensive Database Training",
+    score: "Competency Certified",
+    scoreType: "Certificate of Training Completion",
+    breakdown: "Relational Concepts · Multi-Table Joins · Aggregations · Subqueries · Data Retrieval",
+    credits: "Industry Training Program",
+    rollNo: "SQL-TR-2026-9481",
+    badge: "SQL Certified",
+    badgeClass: "cyan",
+    image: "assets/certificates/cert-sql.jpg",
+    pdfUrl: "assets/certificates/SQL_Training_Certificate.pdf",
+    coordinator: "Training Director (Database & Analytics Program)",
+    description: "Completed SQL training and gained knowledge of database concepts, queries and data retrieval.",
+    iconSvg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`
+  },
+  {
+    id: "cert-python-internship",
+    title: "Python Internship",
+    shortTitle: "Python Internship",
+    issuer: "CareerSchool HR Solutions",
+    authority: "MSME · Ministry of Corporate Affairs (Govt. of India) · APSCHE",
+    categories: ["all", "featured", "ai"],
+    period: "July 2026",
+    duration: "Two-Month Python Internship & AI Program",
+    score: "Excellence",
+    scoreType: "Certificate of Professional Excellence",
+    breakdown: "Adv. Python · Analytics · Generative AI Workflows & Production Deployments",
+    credits: "Govt-Recognized Accreditation",
+    rollNo: "CS-HR-2026-AI-0207",
+    badge: "Professional Excellence",
+    badgeClass: "gold",
+    image: "assets/certificates/cert-careerschool-genai.jpg",
+    pdfUrl: "assets/certificates/CareerSchool_Python_Analytics_GenAI.jpg",
+    coordinator: "Kartikey Anil Vithlani (Director, CareerSchool HR Solutions)",
+    description: "Completed a two-month Python-domain internship at Career School HR Solutions.",
+    iconSvg: `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.914 0C5.748 0 6.137 2.68 6.137 2.68l.006 2.78h5.882v.834H3.83S0 5.86 0 12.046c0 6.185 3.344 5.952 3.344 5.952h1.996v-2.81s-.109-3.345 3.287-3.345h5.66v-.84H8.625s-2.87.163-2.87-2.733c0-2.896 2.502-2.84 2.502-2.84h6.082s2.613.078 2.613-2.584c0-2.66-2.222-2.846-5.038-2.846zm-2.12 1.696a.91.91 0 1 1 0 1.82.91.91 0 0 1 0-1.82zM12.086 24c6.166 0 5.777-2.68 5.777-2.68l-.006-2.78h-5.882v-.834h8.192s3.83.434 3.83-5.752c0-6.185-3.344-5.952-3.344-5.952h-1.996v2.81s.109 3.345-3.287 3.345h-5.66v.84h5.662s2.87-.163 2.87 2.733c0 2.896-2.502 2.84-2.502 2.84h-6.082s-2.613-.078-2.613 2.584c0 2.66 2.222 2.846 5.038 2.846zm2.12-1.696a.91.91 0 1 1 0-1.82.91.91 0 0 1 0 1.82z"/></svg>`
+  },
+  {
+    id: "cert-aws",
+    title: "AWS Certificate",
+    shortTitle: "AWS Certificate",
+    issuer: "AWS & Cloud Academy",
+    authority: "Cloud Technology Training",
+    categories: ["all", "featured"],
+    period: "August 2026",
+    duration: "Cloud Practitioner Architecture Program",
+    score: "Cloud Certified",
+    scoreType: "Certificate of Cloud Technology Training",
+    breakdown: "AWS Cloud Fundamentals · EC2 Compute · S3 Storage · IAM & Network Security",
+    credits: "Cloud Certified",
+    rollNo: "AWS-CLD-2026-7721",
+    badge: "AWS Certified",
+    badgeClass: "cyan",
+    image: "assets/certificates/cert-aws.jpg",
+    pdfUrl: "assets/certificates/AWS_Cloud_Certificate.pdf",
+    coordinator: "Cloud Program Lead (AWS Learning & Cloud Academy)",
+    description: "Certificate related to AWS learning and cloud technology training.",
+    iconSvg: `<svg viewBox="0 0 30 20" fill="currentColor" aria-hidden="true"><text x="0" y="13" font-family="system-ui, sans-serif" font-weight="900" font-size="13" fill="currentColor">aws</text><path d="M1 16 Q12 21 24 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M22 14.5 L25 16.5 L23 18.5" fill="currentColor"/></svg>`
+  },
+  {
+    id: "cert-incubation-entrepreneurship",
+    title: "Understanding Incubation and Entrepreneurship",
+    shortTitle: "Incubation & Entrepreneurship",
+    issuer: "Indian Institute of Technology Bombay",
+    authority: "NPTEL · Ministry of Education, Govt. of India",
+    categories: ["all", "iit"],
+    period: "Jan - Apr 2026",
+    duration: "12 Week Course · 4 Credits",
+    score: "90%",
+    scoreType: "Consolidated Score: 90% (Elite + Gold Medal)",
+    breakdown: "Online Assignments: 24.38/25 · Proctored Exam: 66/75 · 7506 Candidates",
+    credits: "4 Credits Recommended",
+    rollNo: "NPTEL26DE06S2185201729",
+    badge: "Elite + Gold Medal · 90%",
+    badgeClass: "gold",
+    image: "assets/certificates/cert-incubation-entrepreneurship.jpg",
+    pdfUrl: "assets/certificates/Understanding_Incubation_and_Entrepreneurship.pdf",
+    coordinator: "Prof. Sridhar Iyer (Head CDEEP & NPTEL Coordinator, IIT Bombay)",
+    description: "Certified with high distinction (90%, Gold Medal) in startup incubation models, venture validation, IP creation, and technology commercialization under IIT Bombay faculty.",
+    iconSvg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>`
+  },
+  {
+    id: "cert-big-data-computing",
+    title: "Big Data Computing",
+    shortTitle: "Big Data Computing",
+    issuer: "Indian Institute of Technology Kanpur",
+    authority: "NPTEL · Ministry of Education, Govt. of India",
+    categories: ["all", "iit"],
+    period: "Aug - Oct 2026",
+    duration: "8 Week Course · 3 Credits",
+    score: "66%",
+    scoreType: "Consolidated Score: 66% (Elite)",
+    breakdown: "Online Assignments: 25/25 · Proctored Exam: 40.5/75 · 11504 Candidates",
+    credits: "3 Credits Recommended",
+    rollNo: "NPTEL26CS189S1480510048",
+    badge: "Elite · 66%",
+    badgeClass: "purple",
+    image: "assets/certificates/cert-big-data-computing.jpg",
+    pdfUrl: "assets/certificates/Big_Data_Computing.pdf",
+    coordinator: "Prof. B. V. Ratish Kumar & Prof. Satyaki Roy (IIT Kanpur)",
+    description: "In-depth study of distributed system architectures, MapReduce distributed data processing, Apache Spark, HDFS storage, and scalable NoSQL database systems.",
+    iconSvg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg>`
+  },
+  {
+    id: "cert-product-engineering",
+    title: "Product Engineering and Design Thinking",
+    shortTitle: "Product Engineering & Design",
+    issuer: "Indian Institute of Technology Kharagpur",
+    authority: "NPTEL · Ministry of Education, Govt. of India",
+    categories: ["all", "iit"],
+    period: "Jan - Mar 2026",
+    duration: "8 Week Course · 3 Credits",
+    score: "64%",
+    scoreType: "Consolidated Score: 64% (Elite)",
+    breakdown: "Online Assignments: 25/25 · Proctored Exam: 39/75 · 2269 Candidates",
+    credits: "3 Credits Recommended",
+    rollNo: "NPTEL26ME57S661501423",
+    badge: "Elite · 64%",
+    badgeClass: "purple",
+    image: "assets/certificates/cert-product-engineering.jpg",
+    pdfUrl: "assets/certificates/Product_Engineering_and_Design_Thinking.pdf",
+    coordinator: "Prof. Haimanti Banerji (Coordinator, NPTEL IIT Kharagpur)",
+    description: "Human-centered design thinking methodologies, user empathy mapping, engineering ergonomics, rapid interactive prototyping, and product validation.",
+    iconSvg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>`
+  },
+  {
+    id: "cert-joy-computing-python",
+    title: "The Joy of Computing using Python",
+    shortTitle: "Joy of Computing using Python",
+    issuer: "Indian Institute of Technology Madras",
+    authority: "NPTEL · Ministry of Education, Govt. of India",
+    categories: ["all", "iit", "ai"],
+    period: "Jul - Oct 2025",
+    duration: "12 Week Course · 3 or 4 Credits",
+    score: "56%",
+    scoreType: "Consolidated Score: 56%",
+    breakdown: "Online Assignments: 24.41/25 · Proctored Exam: 31.5/75 · 20403 Candidates",
+    credits: "3 or 4 Credits Recommended",
+    rollNo: "NPTEL25CS103S2562100862",
+    badge: "NPTEL Certified · 56%",
+    badgeClass: "cyan",
+    image: "assets/certificates/cert-joy-computing-python.jpg",
+    pdfUrl: "assets/certificates/The_Joy_of_Computing_using_Python.pdf",
+    coordinator: "Prof. Andrew Thangaraj & Prof. Vignesh Muthuvijayan (IIT Madras)",
+    description: "Computational problem solving, algorithmic problem decomposition, recursion, Python data structures, and mathematical modeling.",
+    iconSvg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`
+  },
+  {
+    id: "cert-privacy-security-social-media",
+    title: "Privacy and Security in Online Social Media",
+    shortTitle: "Privacy & Social Media Security",
+    issuer: "IIIT Hyderabad & IIT Madras",
+    authority: "NPTEL · Ministry of Education, Govt. of India",
+    categories: ["all", "iit"],
+    period: "Jul - Oct 2026",
+    duration: "12 Week Course · 4 Credits",
+    score: "57%",
+    scoreType: "Consolidated Score: 57%",
+    breakdown: "Online Assignments: 23.93/25 · Proctored Exam: 32.25/75 · 28451 Candidates",
+    credits: "4 Credits Recommended",
+    rollNo: "NPTEL26CS141S1380510048",
+    badge: "NPTEL Certified · 57%",
+    badgeClass: "cyan",
+    image: "assets/certificates/cert-privacy-security-social-media.jpg",
+    pdfUrl: "assets/certificates/Privacy_and_Security_in_Online_Social_Media.pdf",
+    coordinator: "Prof. Kishore Kothapalli (IIIT Hyderabad) & Prof. Andrew Thangaraj (IIT Madras)",
+    description: "Rigorous analysis of digital privacy protection, social network security vulnerabilities, cyber threat vectors, and OSINT defense.",
+    iconSvg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>`
   }
 ];
 
@@ -117,6 +323,27 @@ document.addEventListener("visibilitychange", () => {
    PROJECT RENDERING & ACCESSIBLE MODAL
    ========================================================= */
 function getProjectArtHtml(artClass) {
+  if (artClass === "scheduler-art") {
+    return `
+      <div class="project-art scheduler-art" aria-hidden="true">
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <span>MAR 2025</span>
+            <span class="cal-dot"></span>
+          </div>
+          <div class="calendar-grid">
+            <span class="cal-cell">9:00</span>
+            <span class="cal-cell booked">10:30 ✓</span>
+            <span class="cal-cell">12:00</span>
+            <span class="cal-cell active">14:00 ★</span>
+            <span class="cal-cell">15:30</span>
+            <span class="cal-cell booked">17:00 ✓</span>
+          </div>
+        </div>
+        <div class="spark s1"></div>
+        <div class="spark s2"></div>
+      </div>`;
+  }
   if (artClass === "ticket-art") {
     return `
       <div class="project-art ticket-art" aria-hidden="true">
@@ -150,11 +377,15 @@ function renderProjects() {
 
   container.innerHTML = projects.map((p, idx) => {
     const liveBtn = p.liveUrl
-      ? `<a href="${escapeHtml(p.liveUrl)}" class="project-btn-link" target="_blank" rel="noopener" aria-label="${escapeHtml(p.title)} Live Demo">Live Demo ↗</a>`
+      ? `<a href="${escapeHtml(p.liveUrl)}" class="project-btn-link primary-demo" target="_blank" rel="noopener" aria-label="${escapeHtml(p.title)} Live Demo">Live Demo ↗</a>`
       : "";
     const repoBtn = p.repoUrl
       ? `<a href="${escapeHtml(p.repoUrl)}" class="project-btn-link ghost" target="_blank" rel="noopener" aria-label="${escapeHtml(p.title)} Source Code">Source Code ↗</a>`
       : "";
+
+    const titleHtml = p.liveUrl
+      ? `<a href="${escapeHtml(p.liveUrl)}" target="_blank" rel="noopener" class="project-title-link" title="Open ${escapeHtml(p.title)} Live Demo">${escapeHtml(p.title)} ↗</a>`
+      : escapeHtml(p.title);
 
     return `
       <article class="project-card tilt reveal" style="--i: ${idx + 1}" data-category="${escapeHtml(p.category)}" data-id="${escapeHtml(p.id)}">
@@ -164,7 +395,7 @@ function renderProjects() {
         </div>
         ${getProjectArtHtml(p.artClass)}
         <div class="project-body">
-          <h3>${escapeHtml(p.title)}</h3>
+          <h3>${titleHtml}</h3>
           <p class="project-outcome">${escapeHtml(p.outcome)}</p>
           <div class="chips">
             ${p.tech.map(t => `<span>${escapeHtml(t)}</span>`).join("")}
@@ -180,22 +411,36 @@ function renderProjects() {
       </article>`;
   }).join("");
 
-  // Attach card click handlers for modal
+  // Attach card click handlers: clicking the card demonstrates to liveUrl if available!
   container.querySelectorAll(".project-card").forEach(card => {
     const id = card.getAttribute("data-id");
     const project = projects.find(p => p.id === id);
     if (!project) return;
 
     card.addEventListener("click", (e) => {
-      // Don't open modal if an outbound link was clicked
+      // Don't intercept if an explicit link was clicked
       if (e.target.closest("a")) return;
-      openProjectModal(project, card);
+      // If View Details button was clicked, open details modal
+      if (e.target.closest(".btn-card-details")) {
+        openProjectModal(project, card);
+        return;
+      }
+      // If clicking anywhere on the card, demonstrate liveUrl if present
+      if (project.liveUrl) {
+        window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+      } else {
+        openProjectModal(project, card);
+      }
     });
 
     card.addEventListener("keydown", (e) => {
       if ((e.key === "Enter" || e.key === " ") && !e.target.closest("a")) {
         e.preventDefault();
-        openProjectModal(project, card);
+        if (project.liveUrl && !e.target.closest(".btn-card-details")) {
+          window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+        } else {
+          openProjectModal(project, card);
+        }
       }
     });
   });
@@ -299,6 +544,251 @@ function closeProjectModal() {
   }
 }
 
+/* =========================================================
+   CERTIFICATES RENDERING & LIGHTBOX MODAL
+   ========================================================= */
+let activeCertIndex = 0;
+const certModal = $("#certModal");
+const certModalCloseBtn = $("#certModalCloseBtn");
+const certPrevBtn = $("#certPrevBtn");
+const certNextBtn = $("#certNextBtn");
+const certZoomBtn = $("#certZoomBtn");
+const certImgWrapper = $("#certImgWrapper");
+let lastFocusedCertTrigger = null;
+
+function renderCertificates() {
+  const container = $("#certificatesGrid");
+  if (!container) return;
+
+  container.innerHTML = certificates.map((cert, idx) => {
+    return `
+      <article class="cert-card tilt reveal" style="--i: ${idx + 1}" data-id="${escapeHtml(cert.id)}" data-categories="${cert.categories.join(' ')}" tabindex="0" role="button" aria-label="View Certificate for ${escapeHtml(cert.title)}">
+        <div class="cert-icon-box" aria-hidden="true">
+          ${cert.iconSvg}
+        </div>
+        <h3 class="cert-card-title">${escapeHtml(cert.title)}</h3>
+        <p class="cert-card-desc">${escapeHtml(cert.description)}</p>
+        <button class="cert-btn-action" type="button" aria-haspopup="dialog" aria-label="View Certificate for ${escapeHtml(cert.title)}">
+          <svg class="cert-eye-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span>View Certificate</span>
+        </button>
+      </article>`;
+  }).join("");
+
+  // Attach click handlers to open modal
+  container.querySelectorAll(".cert-card").forEach((card, idx) => {
+    card.addEventListener("click", () => {
+      openCertificateModal(idx, card);
+    });
+
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openCertificateModal(idx, card);
+      }
+    });
+  });
+}
+
+function setupCertificateFilters() {
+  const pills = $$(".cert-filters .filter-pill");
+  pills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      pills.forEach(p => {
+        p.classList.remove("active");
+        p.setAttribute("aria-selected", "false");
+      });
+      pill.classList.add("active");
+      pill.setAttribute("aria-selected", "true");
+
+      const filter = pill.getAttribute("data-cert-filter");
+      const cards = $$(".cert-card");
+
+      cards.forEach(card => {
+        const cats = (card.getAttribute("data-categories") || "").split(" ");
+        const matches = filter === "all" || cats.includes(filter);
+
+        if (matches) {
+          card.classList.remove("is-hidden");
+          requestAnimationFrame(() => {
+            card.style.opacity = "1";
+            card.style.transform = "scale(1)";
+          });
+        } else {
+          card.style.opacity = "0";
+          card.style.transform = "scale(0.96)";
+          setTimeout(() => {
+            if (card.style.opacity === "0") {
+              card.classList.add("is-hidden");
+            }
+          }, 280);
+        }
+      });
+    });
+  });
+}
+
+function populateCertModal(certIndex) {
+  if (certIndex < 0 || certIndex >= certificates.length) return;
+  activeCertIndex = certIndex;
+  const cert = certificates[certIndex];
+
+  const imgEl = $("#certModalImg");
+  if (imgEl) {
+    imgEl.src = cert.image;
+    imgEl.alt = cert.title + " full certificate";
+  }
+  if (certImgWrapper) certImgWrapper.classList.remove("zoomed");
+
+  const badgeEl = $("#certModalBadge");
+  if (badgeEl) {
+    badgeEl.textContent = cert.badge;
+    badgeEl.className = `modal-tag ${cert.badgeClass}`;
+  }
+  const periodEl = $("#certModalPeriod");
+  if (periodEl) periodEl.textContent = cert.period;
+  const titleEl = $("#certModalTitle");
+  if (titleEl) titleEl.textContent = cert.title;
+  const issuerEl = $("#certModalIssuer");
+  if (issuerEl) issuerEl.textContent = `${cert.issuer} (${cert.authority})`;
+  const candidateEl = $("#certModalCandidate");
+  if (candidateEl) candidateEl.textContent = "NARIBOYINA SAI KRISHNA";
+  const scoreEl = $("#certModalScore");
+  if (scoreEl) scoreEl.textContent = cert.score;
+  const breakdownEl = $("#certModalBreakdown");
+  if (breakdownEl) breakdownEl.textContent = cert.breakdown;
+  const rollEl = $("#certModalRoll");
+  if (rollEl) rollEl.textContent = cert.rollNo;
+  const creditsEl = $("#certModalCredits");
+  if (creditsEl) creditsEl.textContent = `${cert.duration} · ${cert.credits}`;
+  const descEl = $("#certModalDesc");
+  if (descEl) descEl.textContent = cert.description;
+
+  const downloadBtn = $("#certDownloadPdfBtn");
+  if (downloadBtn) {
+    downloadBtn.href = cert.pdfUrl;
+    downloadBtn.setAttribute("download", cert.pdfUrl.split("/").pop());
+    const isImage = cert.pdfUrl.endsWith(".jpg") || cert.pdfUrl.endsWith(".png");
+    const labelSpan = downloadBtn.querySelector("span");
+    if (labelSpan) {
+      labelSpan.textContent = isImage ? "Download Certificate Image ↓" : "Download Official Signed PDF ↓";
+    }
+  }
+
+  const openImageBtn = $("#certOpenImageBtn");
+  if (openImageBtn) {
+    openImageBtn.href = cert.image;
+  }
+
+  const counter = $("#certNavCounter");
+  if (counter) {
+    counter.textContent = `${certIndex + 1} / ${certificates.length}`;
+  }
+}
+
+function openCertificateModal(index, trigger) {
+  if (!certModal) return;
+  lastFocusedCertTrigger = trigger || document.activeElement;
+  populateCertModal(index);
+
+  certModal.classList.add("open");
+  certModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+
+  if (certModalCloseBtn) certModalCloseBtn.focus();
+}
+
+function closeCertificateModal() {
+  if (!certModal || !certModal.classList.contains("open")) return;
+  certModal.classList.remove("open");
+  certModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  if (certImgWrapper) certImgWrapper.classList.remove("zoomed");
+
+  if (lastFocusedCertTrigger && typeof lastFocusedCertTrigger.focus === "function") {
+    lastFocusedCertTrigger.focus();
+  }
+}
+
+function setupCertModalListeners() {
+  if (!certModal) return;
+
+  certModal.addEventListener("click", (e) => {
+    if (e.target === certModal) closeCertificateModal();
+  });
+
+  if (certModalCloseBtn) {
+    certModalCloseBtn.addEventListener("click", closeCertificateModal);
+  }
+
+  if (certPrevBtn) {
+    certPrevBtn.addEventListener("click", () => {
+      const prevIdx = (activeCertIndex - 1 + certificates.length) % certificates.length;
+      populateCertModal(prevIdx);
+    });
+  }
+
+  if (certNextBtn) {
+    certNextBtn.addEventListener("click", () => {
+      const nextIdx = (activeCertIndex + 1) % certificates.length;
+      populateCertModal(nextIdx);
+    });
+  }
+
+  if (certZoomBtn && certImgWrapper) {
+    certZoomBtn.addEventListener("click", () => {
+      certImgWrapper.classList.toggle("zoomed");
+    });
+  }
+
+  window.addEventListener("keydown", (e) => {
+    if (!certModal || !certModal.classList.contains("open")) return;
+
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeCertificateModal();
+      return;
+    }
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      const prevIdx = (activeCertIndex - 1 + certificates.length) % certificates.length;
+      populateCertModal(prevIdx);
+      return;
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      const nextIdx = (activeCertIndex + 1) % certificates.length;
+      populateCertModal(nextIdx);
+      return;
+    }
+
+    if (e.key === "Tab") {
+      const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const focusables = [...certModal.querySelectorAll(focusableSelector)].filter(
+        el => !el.disabled && el.offsetParent !== null
+      );
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+  });
+}
+
 // Focus Trap Inside Modal
 function handleModalKeydown(e) {
   if (!modal || !modal.classList.contains("open")) return;
@@ -384,7 +874,7 @@ function playHeroIntro() {
   heroIntroPlayed = true;
 
   document.body.classList.remove("lamp-pending");
-  document.body.classList.add("hero-intro-active");
+  document.body.classList.add("hero-intro-active", "profile-revealed");
 
   const nameEl = $("#heroName");
   const bloom = $("#heroLightBloom");
@@ -395,12 +885,14 @@ function playHeroIntro() {
   const typewriterEl = $("#typewriter");
 
   if (isReducedMotion) {
-    document.body.classList.add("hero-intro-done");
+    document.body.classList.add("hero-intro-done", "profile-revealed");
     if (nameEl) nameEl.querySelectorAll(".split-char").forEach(c => c.classList.add("char-revealed"));
     if (ring) ring.classList.add("ring-drawn");
     if (space) space.style.opacity = "0.35";
     if (navbar) navbar.classList.add("navbar-revealed");
     if (coreCard) coreCard.classList.add("card-revealed");
+    const scrollIndicator = $("#heroScrollIndicator");
+    if (scrollIndicator) scrollIndicator.classList.add("scroll-indicator-revealed");
     $$(".hero-badge, .eyebrow, .hero-greeting, .hero-tagline, .hero-text, .hero-actions, .quick-stats").forEach(el => el.classList.add("intro-revealed"));
     $$(".hero-visual .node").forEach(n => n.classList.add("node-drift-in"));
     if (typewriterEl) typewriterEl.textContent = words[0];
@@ -410,9 +902,6 @@ function playHeroIntro() {
   // 1. Radial Light Bloom expands & particle canvas fades in
   if (bloom) bloom.classList.add("bloom-active");
   if (space) space.classList.add("space-revealed");
-
-  // 8. Navbar slides down and fades in
-  if (navbar) navbar.classList.add("navbar-revealed");
 
   // Eyebrow & status badge
   const badge = $(".hero-badge");
@@ -472,7 +961,14 @@ function playHeroIntro() {
     nodes.forEach(node => node.classList.add("node-drift-in"));
   }, HERO_INTRO_CONFIG.nodesDelay);
 
-  // 7. Settle sequence & initiate typewriter
+  // 7. Scroll indicator & Navbar slide down after hero content
+  setTimeout(() => {
+    const scrollIndicator = $("#heroScrollIndicator");
+    if (scrollIndicator) scrollIndicator.classList.add("scroll-indicator-revealed");
+    if (navbar) navbar.classList.add("navbar-revealed");
+  }, 1600);
+
+  // 8. Settle sequence & initiate typewriter
   setTimeout(() => {
     document.body.classList.add("hero-intro-done");
     document.body.classList.remove("hero-intro-active");
@@ -501,6 +997,10 @@ function resetHeroIntro() {
   if (space) space.classList.remove("space-revealed");
   const navbar = $("#navbar");
   if (navbar) navbar.classList.remove("navbar-revealed");
+  const scrollIndicator = $("#heroScrollIndicator");
+  if (scrollIndicator) scrollIndicator.classList.remove("scroll-indicator-revealed");
+  const primaryBtn = $(".hero-actions .btn.primary");
+  if (primaryBtn) primaryBtn.classList.remove("glow-pulse");
   const coreCard = $("#heroCoreCard");
   if (coreCard) coreCard.classList.remove("card-revealed");
   const ring = $(".portrait-ring-circle");
@@ -520,8 +1020,36 @@ function initPortfolio() {
 
   renderProjects();
   setupProjectFilters();
+  renderCertificates();
+  setupCertificateFilters();
+  setupCertModalListeners();
   observeReveals();
   initHeroSplitText();
+
+  // Smooth hash scroll with fixed navbar offset
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const headerOffset = 76;
+        const elPosition = targetEl.getBoundingClientRect().top;
+        const offsetPosition = elPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+        const nav = $("#navLinks");
+        const menuBtn = $("#menuBtn");
+        if (nav && nav.classList.contains("open")) {
+          nav.classList.remove("open");
+          if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+        }
+      }
+    });
+  });
 
   // Landing Lamp Setup
   const welcome = $("#welcomeScreen");
@@ -536,7 +1064,7 @@ function initPortfolio() {
 
       if (chain) chain.classList.add("pulled");
       if (lamp) lamp.classList.add("lamp-on");
-      document.body.classList.add("lamp-mode");
+      document.body.classList.add("lamp-mode", "profile-revealed");
       welcome.classList.add("lamp-reveal");
 
       setTimeout(() => {
@@ -567,13 +1095,61 @@ function initPortfolio() {
       });
     }
 
+    const enterBtn = $("#welcomeEnterBtn");
+    if (enterBtn) {
+      enterBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        enterPortfolio();
+      });
+    }
+
+    const scrollBtn = $("#welcomeScrollBtn");
+    if (scrollBtn) {
+      scrollBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        enterPortfolio();
+      });
+      scrollBtn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          enterPortfolio();
+        }
+      });
+    }
+
     // Direct load if welcome screen already completed
     if (welcome.classList.contains("entered")) {
+      document.body.classList.add("profile-revealed");
       playHeroIntro();
     }
   } else {
     // Direct load without welcome screen
+    document.body.classList.add("profile-revealed");
     playHeroIntro();
+  }
+
+  // View Certificates Scroll CTA
+  const viewCertsBtn = $("#viewCertificatesBtn");
+  if (viewCertsBtn) {
+    viewCertsBtn.addEventListener("click", () => {
+      const target = $("#certificatesGrid") || $("#certificates");
+      if (target) {
+        const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+    });
+  }
+
+  const viewCertsScrollBtn = $("#viewCertificatesScrollBtn");
+  if (viewCertsScrollBtn) {
+    viewCertsScrollBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = $("#certificatesGrid") || $("#certificates");
+      if (target) {
+        const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+    });
   }
 
   // Final Return Lamp Setup
@@ -781,23 +1357,14 @@ const sectionObserver = new IntersectionObserver(entries => {
 sections.forEach(s => sectionObserver.observe(s));
 
 /* =========================================================
-   TOUCH / CLICK TO REVEAL PROFILE
+   PROFILE PORTRAIT INTERACTION
    ========================================================= */
-const profileReveal = $("#profileReveal");
-if (profileReveal) {
-  const revealProfile = () => {
-    if (profileReveal.classList.contains("revealed")) return;
-    profileReveal.classList.add("revealed");
-    profileReveal.setAttribute("aria-label", "Profile image revealed");
-    document.body.classList.add("profile-revealed");
-  };
-
-  profileReveal.addEventListener("pointerup", revealProfile, { passive: true });
-  profileReveal.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      revealProfile();
-    }
+const profileCore = $("#profileCore");
+if (profileCore) {
+  document.body.classList.add("profile-revealed");
+  profileCore.addEventListener("click", () => {
+    profileCore.classList.add("pulse-active");
+    setTimeout(() => profileCore.classList.remove("pulse-active"), 1200);
   });
 }
 
