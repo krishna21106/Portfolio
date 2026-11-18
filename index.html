@@ -22,10 +22,13 @@
       <p class="welcome-name">S A I &nbsp; K R I S H N A</p>
       <div class="welcome-enter">
         <span class="welcome-line"></span>
-        <span>PULL THE LAMP CHAIN TO ENTER</span>
+        <span>PULL THE LAMP CHAIN OR CLICK BELOW TO ENTER</span>
         <span class="welcome-line"></span>
       </div>
-      <div class="welcome-scroll">↓</div>
+      <button class="welcome-enter-btn magnetic" id="welcomeEnterBtn" type="button" aria-label="Enter portfolio">
+        <span>Enter Portfolio</span> <span class="arrow">→</span>
+      </button>
+      <div class="welcome-scroll" id="welcomeScrollBtn" role="button" tabindex="0" aria-label="Scroll down to enter">↓</div>
     </div>
 
     <div class="welcome-lamp" id="welcomeLamp" aria-hidden="true">
@@ -61,10 +64,17 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Work</a>
+      <a href="#certificates">Certificates</a>
       <a href="#github">GitHub</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta magnetic" href="#contact">Let's Talk <span>↗</span></a>
+    <div class="nav-actions">
+      <a class="nav-resume-btn magnetic" href="assets/Sai_Krishna_Resume.pdf" download="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener" aria-label="Download Sai Krishna Resume PDF">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Resume PDF</span>
+      </a>
+      <a class="nav-cta magnetic" href="#contact">Let's Talk <span>↗</span></a>
+    </div>
   </header>
 
   <main>
@@ -83,12 +93,18 @@
         <p class="hero-text">A Computer Science student passionate about full-stack web applications, interactive interfaces, backend development, and practical software projects.</p>
         <div class="hero-actions">
           <a class="btn primary magnetic" href="#projects">Explore Work <span class="arrow">→</span></a>
-          <a class="btn ghost magnetic" href="https://github.com/krishna21106" target="_blank" rel="noopener">GitHub Profile ↗</a>
+          <a class="btn accent-btn magnetic" href="#certificates">View Certificates 🏆</a>
+          <a class="btn resume-btn magnetic" href="assets/Sai_Krishna_Resume.pdf" download="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener" aria-label="Download Sai Krishna Resume PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Resume PDF ↓</span>
+          </a>
+          <a class="btn ghost magnetic" href="https://github.com/krishna21106" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
         <div class="quick-stats">
           <div><strong>GITHUB</strong><small>@krishna21106</small></div>
           <div><strong>CSE</strong><small>Department</small></div>
-          <div><strong class="gradient-text">WEB DEV</strong><small>Development Focus</small></div>
+          <div><strong class="gradient-text">6 HONORS</strong><small>Certifications</small></div>
+          <div><strong class="gradient-text">WEB & AI</strong><small>Development Focus</small></div>
         </div>
       </div>
 
@@ -113,10 +129,9 @@
               </defs>
               <circle class="portrait-ring-circle" cx="130" cy="130" r="126" />
             </svg>
-            <button class="core-letter profile-core profile-reveal-target" id="profileReveal" type="button" aria-label="Touch to reveal profile image">
-              <img src="assets/profile.png" alt="Sai Krishna - Computer Science Student" decoding="async" loading="lazy" />
-              <span class="profile-reveal-hint"><b>+</b><small>TOUCH<br>TO REVEAL</small></span>
-            </button>
+            <div class="core-letter profile-core" id="profileCore" role="img" aria-label="Sai Krishna - Computer Science Student portrait">
+              <img src="assets/profile.png" alt="Sai Krishna - Computer Science Student" decoding="async" fetchpriority="high" />
+            </div>
           </div>
           <span class="node node-1 float-anim">Django</span>
           <span class="node node-2 float-anim delay-1">JavaScript</span>
@@ -157,6 +172,13 @@
             <div><span>Location</span><b>Andhra Pradesh, India</b></div>
             <div><span>Phone</span><b>+91 9014723474</b></div>
             <div><span>GitHub</span><b>@krishna21106</b></div>
+          </div>
+          <div class="about-actions">
+            <a class="btn resume-btn magnetic" href="assets/Sai_Krishna_Resume.pdf" download="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Resume (White PDF) ↓</span>
+            </a>
+            <a class="btn ghost magnetic" href="#certificates">View Certificates 🏆</a>
           </div>
         </div>
       </div>
@@ -213,9 +235,42 @@
       </div>
     </section>
 
-    <section class="section github-section" id="github">
+    <section class="section certificates-section" id="certificates">
       <div class="section-heading reveal" style="--i: 0">
         <span class="section-number">04</span>
+        <div><p>ACCREDITATIONS & HONORS</p><h2>Certificates & <span>Achievements</span></h2></div>
+      </div>
+
+      <div class="certificates-intro-bar reveal" style="--i: 1">
+        <p class="certs-intro-text">
+          These certifications represent my learning journey, technical training and efforts to improve my skills. Click View Certificate to explore each certificate.
+        </p>
+        <div class="certs-header-actions">
+          <a class="btn primary magnetic" href="#certificatesGrid" id="viewCertificatesScrollBtn">
+            <span>View Certificates</span> <span class="arrow">↓</span>
+          </a>
+          <a class="btn resume-btn magnetic" href="assets/Sai_Krishna_Resume.pdf" download="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Resume (White PDF) ↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cert-filters reveal" style="--i: 1" role="tablist" aria-label="Filter certificates by category">
+        <button class="filter-pill active" data-cert-filter="all" type="button" role="tab" aria-selected="true">All (8)</button>
+        <button class="filter-pill" data-cert-filter="featured" type="button" role="tab" aria-selected="false">Featured (3)</button>
+        <button class="filter-pill" data-cert-filter="iit" type="button" role="tab" aria-selected="false">IIT & NPTEL (5)</button>
+        <button class="filter-pill" data-cert-filter="ai" type="button" role="tab" aria-selected="false">Python & AI (2)</button>
+      </div>
+
+      <div class="certificates-grid" id="certificatesGrid" aria-live="polite">
+        <!-- Data-driven certificate cards rendered via script.js -->
+      </div>
+    </section>
+
+    <section class="section github-section" id="github">
+      <div class="section-heading reveal" style="--i: 0">
+        <span class="section-number">05</span>
         <div><p>OPEN SOURCE & REPOS</p><h2>Git<span>Hub</span></h2></div>
       </div>
       <div class="github-card glass reveal tilt" style="--i: 1">
@@ -248,10 +303,10 @@
           <div class="repo-icon">{ }</div>
           <div class="repo-content">
             <div class="repo-title"><a href="https://github.com/krishna21106/Intelligent-Meeting-Scheduler" target="_blank" rel="noopener">Intelligent-Meeting-Scheduler</a><span class="public">Public</span></div>
-            <p>Intelligent meeting scheduling project from the GitHub profile.</p>
-            <div class="repo-meta"><span>★ GitHub repository</span></div>
+            <p>Automated meeting scheduling & slot coordination system with conflict resolution.</p>
+            <div class="repo-meta"><span><i class="dot py"></i> Python</span><span><a href="https://intelligent-meeting-scheduler.onrender.com/" target="_blank" rel="noopener" style="color: #10b981; font-weight: 600;">Live Demonstration ↗</a></span></div>
           </div>
-          <a class="repo-arrow" href="https://github.com/krishna21106/Intelligent-Meeting-Scheduler" target="_blank" rel="noopener" aria-label="Open repository on GitHub">↗</a>
+          <a class="repo-arrow" href="https://intelligent-meeting-scheduler.onrender.com/" target="_blank" rel="noopener" aria-label="Open Intelligent Meeting Scheduler Live Demonstration">↗</a>
         </div>
       </div>
     </section>
@@ -338,6 +393,72 @@
     </div>
   </div>
 
+  <!-- Accessible Certificate Lightbox Modal -->
+  <div class="modal-backdrop" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle" aria-hidden="true">
+    <div class="modal-window glass cert-modal-window" role="document">
+      <button class="modal-close" id="certModalCloseBtn" type="button" aria-label="Close certificate modal">&times;</button>
+      <div class="cert-modal-body">
+        <div class="cert-modal-preview">
+          <div class="cert-img-wrapper" id="certImgWrapper">
+            <img id="certModalImg" src="assets/certificates/cert-incubation-entrepreneurship.jpg" alt="Certificate full preview" />
+            <button class="cert-zoom-btn" id="certZoomBtn" type="button" aria-label="Toggle certificate zoom">🔍 Toggle Fit / Zoom</button>
+          </div>
+        </div>
+        <div class="cert-modal-sidebar">
+          <div class="modal-meta">
+            <span class="modal-tag" id="certModalBadge">Elite + Gold Medal</span>
+            <span class="modal-year" id="certModalPeriod">Jan - Apr 2026</span>
+          </div>
+          <h2 id="certModalTitle">Understanding Incubation and Entrepreneurship</h2>
+          <p class="cert-modal-issuer" id="certModalIssuer">Indian Institute of Technology Bombay</p>
+          
+          <div class="cert-details-list">
+            <div class="cert-detail-row">
+              <span class="cert-label">Candidate:</span>
+              <strong id="certModalCandidate">NARIBOYINA SAI KRISHNA</strong>
+            </div>
+            <div class="cert-detail-row">
+              <span class="cert-label">Consolidated Score:</span>
+              <strong class="cert-score-highlight" id="certModalScore">90%</strong>
+            </div>
+            <div class="cert-detail-row">
+              <span class="cert-label">Assessment:</span>
+              <span id="certModalBreakdown">Online Assignments: 24.38/25 · Exam: 66/75</span>
+            </div>
+            <div class="cert-detail-row">
+              <span class="cert-label">Credential ID / Roll:</span>
+              <code id="certModalRoll">NPTEL26DE06S2185201729</code>
+            </div>
+            <div class="cert-detail-row">
+              <span class="cert-label">Duration & Credits:</span>
+              <span id="certModalCredits">12 Week Course · 4 Credits</span>
+            </div>
+            <div class="cert-detail-row">
+              <span class="cert-label">Course Overview:</span>
+              <p class="cert-desc-text" id="certModalDesc">Course details...</p>
+            </div>
+          </div>
+
+          <div class="cert-modal-actions">
+            <a class="btn primary magnetic" id="certDownloadPdfBtn" href="assets/certificates/Understanding_Incubation_and_Entrepreneurship.pdf" download target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Official PDF ↓</span>
+            </a>
+            <a class="btn ghost magnetic" id="certOpenImageBtn" href="assets/certificates/cert-incubation-entrepreneurship.jpg" target="_blank" rel="noopener">
+              <span>Open Full Image ↗</span>
+            </a>
+          </div>
+
+          <div class="cert-nav-controls">
+            <button class="cert-nav-btn prev" id="certPrevBtn" type="button" aria-label="Previous certificate">← Previous</button>
+            <span class="cert-nav-counter" id="certNavCounter">1 / 6</span>
+            <button class="cert-nav-btn next" id="certNextBtn" type="button" aria-label="Next certificate">Next →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div><a class="brand" href="#home"><span>SK</span><b>SAI KRISHNA</b></a><p>Designed & built for high performance.</p></div>
     <div class="footer-links">
@@ -345,8 +466,10 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Work</a>
+      <a href="#certificates">Certificates</a>
       <a href="#github">GitHub</a>
       <a href="#contact">Contact</a>
+      <a href="assets/Sai_Krishna_Resume.pdf" download="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener">Resume PDF ↓</a>
     </div>
     <p class="copyright">© <span id="year"></span> Sai Krishna. All rights reserved.</p>
   </footer>
