@@ -25,6 +25,30 @@ function escapeHtml(str) {
    ========================================================= */
 const projects = [
   {
+    id: "network-monitoring-system",
+    title: "Network Monitoring System",
+    subtitle: "Enterprise NOC Console & Topology Orchestrator",
+    category: "Full Stack",
+    year: "2026",
+    outcome: "Full-stack NOC dashboard featuring real-time telemetry, topology mapping, and automated alert mitigation.",
+    description: "A production-grade network operations and monitoring console built with Spring Boot, React, TypeScript, and PostgreSQL. Features interactive topology mapping, live device metrics streaming, IPAM/VLAN orchestration, and role-based quad-panel portals.",
+    problem: "Network engineers and administrators struggle with fragmented diagnostic tools, delayed outage notifications, and lack of safe sandbox environments for evaluating topology performance.",
+    solution: "Built a centralized network monitoring platform featuring real-time simulated telemetry, automated alert rule triggering, interactive visual network graphs, and role-based operational portals.",
+    role: "Full-Stack Developer — Architected Spring Boot backend REST services, JWT security, React/TypeScript telemetry dashboards, network topology visualization, and Render cloud deployment.",
+    keyFeatures: [
+      "Quad-Panel role-based login portals (Administrator, Operator, Student Station, Viewer)",
+      "Interactive network topology mapping with live device status and link indicators",
+      "Real-time telemetry streaming for CPU, memory, packet stream dissection, and latency",
+      "Integrated IPAM, VLAN allocation tracking, and automated configuration backups"
+    ],
+    tech: ["React", "TypeScript", "Spring Boot", "Java", "PostgreSQL", "REST APIs", "Docker", "Render Cloud"],
+    liveUrl: "https://network-monitoring-system-2.onrender.com/login",
+    repoUrl: "https://github.com/krishna21106/Network-Monitoring-System",
+    accent: "#20d9ff",
+    artClass: "network-art",
+    metrics: "Full-stack enterprise NOC console with real-time telemetry & topology mapping"
+  },
+  {
     id: "meeting-scheduler",
     title: "Intelligent Meeting Scheduler",
     subtitle: "AI-Powered Automated Slot Scheduling & Calendar Coordination",
@@ -323,6 +347,32 @@ document.addEventListener("visibilitychange", () => {
    PROJECT RENDERING & ACCESSIBLE MODAL
    ========================================================= */
 function getProjectArtHtml(artClass) {
+  if (artClass === "network-art") {
+    return `
+      <div class="project-art network-art" aria-hidden="true">
+        <div class="network-pulse-card">
+          <div class="network-header">
+            <span class="net-status-dot online"></span>
+            <span class="net-label">NOC LIVE TELEMETRY</span>
+            <span class="net-ping">24ms</span>
+          </div>
+          <div class="network-topology-nodes">
+            <div class="net-node gateway"><span class="node-icon">🌐</span><span class="node-lbl">Gateway</span></div>
+            <div class="net-cable"></div>
+            <div class="net-node router"><span class="node-icon">🖧</span><span class="node-lbl">Core Router</span></div>
+            <div class="net-cable"></div>
+            <div class="net-node server"><span class="node-icon">🖳</span><span class="node-lbl">NOC Server</span></div>
+          </div>
+          <div class="network-metrics-row">
+            <div class="net-metric"><span>UPTIME</span><b>99.98%</b></div>
+            <div class="net-metric"><span>TRAFFIC</span><b>1.2 Gbps</b></div>
+            <div class="net-metric"><span>HEALTH</span><b class="online-text">OPTIMAL</b></div>
+          </div>
+        </div>
+        <div class="spark s1"></div>
+        <div class="spark s2"></div>
+      </div>`;
+  }
   if (artClass === "scheduler-art") {
     return `
       <div class="project-art scheduler-art" aria-hidden="true">
@@ -1577,12 +1627,17 @@ if (canvas) {
    ========================================================= */
 const GITHUB_USER = "krishna21106";
 
+const repoLiveMap = {
+  "Network-Monitoring-System": "https://network-monitoring-system-2.onrender.com/login",
+  "Intelligent-Meeting-Scheduler": "https://intelligent-meeting-scheduler.onrender.com/"
+};
+
 fetch(`https://api.github.com/users/${GITHUB_USER}`)
   .then(r => r.ok ? r.json() : Promise.reject())
   .then(data => {
     const rEl = $("#repoCount");
     const fEl = $("#followCount");
-    if (rEl) rEl.setAttribute("data-val", data.public_repos ?? 2);
+    if (rEl) rEl.setAttribute("data-val", data.public_repos ?? 3);
     if (fEl) fEl.setAttribute("data-val", data.followers ?? 0);
   })
   .catch(() => {});
@@ -1598,7 +1653,16 @@ fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updat
     if (!container || !repos.length) return;
 
     // Strict sanitization with escapeHtml
-    container.innerHTML = repos.slice(0, 6).map((repo, idx) => `
+    container.innerHTML = repos.slice(0, 6).map((repo, idx) => {
+      const liveDemoUrl = repoLiveMap[repo.name];
+      const arrowUrl = liveDemoUrl || repo.html_url;
+      const arrowLabel = liveDemoUrl ? `Open ${repo.name} Live Demonstration` : `Open ${repo.name} on GitHub`;
+      const liveMeta = liveDemoUrl
+        ? `<span><a href="${escapeHtml(liveDemoUrl)}" target="_blank" rel="noopener" style="color: #20d9ff; font-weight: 600;">Live Demonstration ↗</a></span>`
+        : `<span>★ ${Number(repo.stargazers_count) || 0}</span>`;
+      const langDot = repo.language === "Python" ? "py" : (repo.language === "TypeScript" ? "ts" : "js");
+
+      return `
       <div class="repo-card glass reveal visible tilt" style="--i: ${idx + 1}">
         <div class="repo-icon">{ }</div>
         <div class="repo-content">
@@ -1608,12 +1672,13 @@ fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updat
           </div>
           <p>${escapeHtml(repo.description || "GitHub project by Sai Krishna.")}</p>
           <div class="repo-meta">
-            <span>${repo.language ? `<i class="dot js"></i> ${escapeHtml(repo.language)}` : "GitHub project"}</span>
-            <span>★ ${Number(repo.stargazers_count) || 0}</span>
+            <span>${repo.language ? `<i class="dot ${langDot}"></i> ${escapeHtml(repo.language)}` : "GitHub project"}</span>
+            ${liveMeta}
           </div>
         </div>
-        <a class="repo-arrow" href="${escapeHtml(repo.html_url)}" target="_blank" rel="noopener" aria-label="Open repository on GitHub">↗</a>
-      </div>`).join("");
+        <a class="repo-arrow" href="${escapeHtml(arrowUrl)}" target="_blank" rel="noopener" aria-label="${escapeHtml(arrowLabel)}">↗</a>
+      </div>`;
+    }).join("");
   })
   .catch(() => {});
 
