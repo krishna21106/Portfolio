@@ -150,28 +150,7 @@ const projects = [
    CERTIFICATES DATA MODEL & ACCREDITATIONS
    ========================================================= */
 const certificates = [
-  {
-    id: "cert-sql",
-    title: "SQL Certificate",
-    shortTitle: "SQL Certificate",
-    issuer: "SQL & Database Academy",
-    authority: "Verified Database Training Program",
-    categories: ["all", "featured"],
-    period: "May 2026",
-    duration: "Comprehensive Database Training",
-    score: "Competency Certified",
-    scoreType: "Certificate of Training Completion",
-    breakdown: "Relational Concepts · Multi-Table Joins · Aggregations · Subqueries · Data Retrieval",
-    credits: "Industry Training Program",
-    rollNo: "SQL-TR-2026-9481",
-    badge: "SQL Certified",
-    badgeClass: "cyan",
-    image: "assets/certificates/cert-sql.jpg",
-    pdfUrl: "assets/certificates/SQL_Training_Certificate.pdf",
-    coordinator: "Training Director (Database & Analytics Program)",
-    description: "Completed SQL training and gained knowledge of database concepts, queries and data retrieval.",
-    iconSvg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`
-  },
+  
   {
     id: "cert-python-internship",
     title: "Python Internship",
@@ -194,28 +173,7 @@ const certificates = [
     description: "Completed a two-month Python-domain internship at Career School HR Solutions.",
     iconSvg: `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.914 0C5.748 0 6.137 2.68 6.137 2.68l.006 2.78h5.882v.834H3.83S0 5.86 0 12.046c0 6.185 3.344 5.952 3.344 5.952h1.996v-2.81s-.109-3.345 3.287-3.345h5.66v-.84H8.625s-2.87.163-2.87-2.733c0-2.896 2.502-2.84 2.502-2.84h6.082s2.613.078 2.613-2.584c0-2.66-2.222-2.846-5.038-2.846zm-2.12 1.696a.91.91 0 1 1 0 1.82.91.91 0 0 1 0-1.82zM12.086 24c6.166 0 5.777-2.68 5.777-2.68l-.006-2.78h-5.882v-.834h8.192s3.83.434 3.83-5.752c0-6.185-3.344-5.952-3.344-5.952h-1.996v2.81s.109 3.345-3.287 3.345h-5.66v.84h5.662s2.87-.163 2.87 2.733c0 2.896-2.502 2.84-2.502 2.84h-6.082s-2.613-.078-2.613 2.584c0 2.66 2.222 2.846 5.038 2.846zm2.12-1.696a.91.91 0 1 1 0-1.82.91.91 0 0 1 0 1.82z"/></svg>`
   },
-  {
-    id: "cert-aws",
-    title: "AWS Certificate",
-    shortTitle: "AWS Certificate",
-    issuer: "AWS & Cloud Academy",
-    authority: "Cloud Technology Training",
-    categories: ["all", "featured"],
-    period: "August 2026",
-    duration: "Cloud Practitioner Architecture Program",
-    score: "Cloud Certified",
-    scoreType: "Certificate of Cloud Technology Training",
-    breakdown: "AWS Cloud Fundamentals · EC2 Compute · S3 Storage · IAM & Network Security",
-    credits: "Cloud Certified",
-    rollNo: "AWS-CLD-2026-7721",
-    badge: "AWS Certified",
-    badgeClass: "cyan",
-    image: "assets/certificates/cert-aws.jpg",
-    pdfUrl: "assets/certificates/AWS_Cloud_Certificate.pdf",
-    coordinator: "Cloud Program Lead (AWS Learning & Cloud Academy)",
-    description: "Certificate related to AWS learning and cloud technology training.",
-    iconSvg: `<svg viewBox="0 0 30 20" fill="currentColor" aria-hidden="true"><text x="0" y="13" font-family="system-ui, sans-serif" font-weight="900" font-size="13" fill="currentColor">aws</text><path d="M1 16 Q12 21 24 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M22 14.5 L25 16.5 L23 18.5" fill="currentColor"/></svg>`
-  },
+ 
   {
     id: "cert-incubation-entrepreneurship",
     title: "Understanding Incubation and Entrepreneurship",
